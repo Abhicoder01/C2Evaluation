@@ -1,0 +1,85 @@
+Answer 2:-
+advantage of using springboot over spring
+1.springboot gives the access the make an application without any other configuration like spring.
+2.it helps to shorten the code.
+3.Its provides the easiest way to make and deploy application.
+4.It can also provide tomcat server for run http web service.
+5.it can reduce the length of the code
+
+
+There are different types of bean scopes like:-
+1.singleton scope.
+2.prototype scope.
+3.request scope
+
+1...
+ApplicationContext ctx= new ClassPathXmlApplicationContext("applicationContext.xml"); 
+Student s=ctx.getbean("a1",Student.class)
+Student s1=ctx.getbean("a1",Student.class)
+(s1==s2)
+true
+
+2....
+<bean id="s1" class="com.masai.A" scope="prototype">   
+<property name="message" value="Welcome to Spring.."/>   
+</bean>
+
+
+ApplicationContext ctx= new ClassPathXmlApplicationContext("applicationContext.xml");          
+Student obj1 =  ctx.getBean("s1",Student.class);         Student obj2 =  ctx.getBean("s1",Student.class);      
+System.out.println(obj1 == obj2); //false
+
+
+
+Answer3:-
+1.1.Soap-based web services
+Soap is language independent.creating web application using soap take extra space and have long code to written
+<student>
+<roll>1</roll>
+<name>"Abhi"</name>
+<marks>100</marks>
+</student>
+
+
+1.2.Restful web service.
+in order to make web services easy and in less code rest service came and its is also the future platform for written web services
+This resource has representaton of Xml,json and HTML.the restful web services are also reuseable
+the important method of https are:-
+A..GET
+B...Post
+3...Put
+4...Delete
+
+
+
+
+Answer 4:-
+4.1difference b/w rest controller and controller
+
+1.The annotation for controller are @Controller    1.the annotation for rest controller are @RestController
+2.it can read the file as an jsp format            2.it can directly convert the data.
+3.its uses response body for get the data          3.it is the combination of @Controller+@ResponseBody
+4.the control upgrade from of component            4.rest controller is the upgrade form of controller
+
+4.2
+1.Autowired annotaion is used to inject the object dependency from one bean to another.
+2.its internally uses setter and constructor function.
+3.It cant inject primitive value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
